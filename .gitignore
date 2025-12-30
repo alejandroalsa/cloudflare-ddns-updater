@@ -1,3 +1,5 @@
 .env
 src/config/config.json
 src/service/cloudflare-ddns.service
+src/__pycache__/
+src/*.pyc
