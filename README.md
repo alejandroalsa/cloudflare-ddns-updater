@@ -19,20 +19,20 @@ Actualiza automáticamente los registros DNS con tu IP pública.
 
 ```
 cloudflare-ddns-updater/
-├── src/
-│   ├── cloudflare-ddns.py          # Script principal
-│   ├── send-email.py                # Módulo de notificaciones por email
-│   ├── requirements.txt             # Dependencias Python
-│   ├── config/
-│   │   ├── config.json              # Configuración de dominios (no se sube a git)
-│   │   └── config.json.example      # Ejemplo de configuración
-│   └── service/
-│       └── cloudflare-ddns.service  # Archivo de servicio systemd
-├── .env                             # Variables de entorno (no se sube a git)
-├── .env.example                     # Ejemplo de variables de entorno
-├── .gitignore                       # Archivos ignorados por git
-├── README.md                        # Este archivo
-└── LICENSE                          # Licencia MIT
+├── LICENSE                         # Licencia del proyecto (MIT)
+├── README.md                       # Documentación principal
+├── .gitignore                      # Archivos ignorados por Git
+└── src
+    ├── cloudflare-ddns.py          # Script principal del DDNS
+    ├── send_email.py               # Envío de notificaciones por email
+    ├── config
+    │   ├── config.json             # Configuración real
+    │   └── config.json.example     # Ejemplo de configuración
+    ├── service
+    │   ├── cloudflare-ddns.service         # Servicio systemd
+    │   └── cloudflare-ddns.service.example # Plantilla de ejemplo
+    └── templates
+        └── email.html              # Plantilla HTML para emails
 ```
 
 ## 📋 Requisitos
