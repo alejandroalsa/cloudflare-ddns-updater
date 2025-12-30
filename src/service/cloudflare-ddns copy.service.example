@@ -1,0 +1,15 @@
+[Unit]
+Description=Cloudflare DDNS Updater
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/alejandroalsa/Lab/cloudflare-ddns-updater
+ExecStart=/usr/bin/python3 /home/alejandroalsa/Lab/cloudflare-ddns-updater/src/cloudflare-ddns.py
+Restart=on-failure
+RestartSec=10
+EnvironmentFile=/home/alejandroalsa/Lab/cloudflare-ddns-updater/.env
+
+[Install]
+WantedBy=multi-user.target

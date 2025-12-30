@@ -1,0 +1,3 @@
+.env
+src/config/config.json
+src/service/cloudflare-ddns.service

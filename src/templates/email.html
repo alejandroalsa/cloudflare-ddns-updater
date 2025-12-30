@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualización de IP</title>
+</head>
+<body style="margin:0; padding:0; background-color:#0f172a; font-family: Arial, Helvetica, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#0f172a; padding:40px 0;">
+    <tr>
+        <td align="center">
+
+        <!-- Contenedor principal -->
+        <table width="640" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+
+            <!-- Header -->
+            <tr>
+                <td style="background:linear-gradient(135deg, #1e293b, #0f172a); padding:24px 30px;">
+                    <h1 style="margin:0; color:#ffffff; font-size:20px; font-weight:600;">
+                        Notificación técnica · Cambio de IP
+                    </h1>
+                    <p style="margin:6px 0 0; color:#cbd5e1; font-size:13px;">
+                        Sistema de gestión de infraestructura
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Contenido -->
+            <tr>
+                <td style="padding:30px; color:#1f2937; font-size:14px; line-height:1.6;">
+
+                    <p>
+                        Este mensaje informa de que se ha detectado una <strong>actualización en la dirección IP</strong> asociada a uno de tus servicios.
+                    </p>
+
+                    <!-- Datos técnicos -->
+                    <table width="100%" cellpadding="0" cellspacing="0" style="margin:25px 0; border-collapse:collapse;">
+                        <tr>
+                            <td style="padding:10px 12px; background:#f1f5f9; font-weight:600; width:40%;">
+                                IP anterior
+                            </td>
+                            <td style="padding:10px 12px; background:#f8fafc;">
+                                {{old_ip}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px 12px; background:#f1f5f9; font-weight:600;">
+                                Nueva IP
+                            </td>
+                            <td style="padding:10px 12px; background:#f8fafc;">
+                                {{new_ip}}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Los siguientes dominios han actualizado correctamente sus registros DNS:
+                    </p>
+
+                    <!-- Lista de dominios -->
+                    <div style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:6px; padding:15px; margin:15px 0;">
+                        <ul style="margin:0; padding-left:0; font-family: monospace; font-size:13px; list-style: none;">
+                            {{domains_list}}
+                        </ul>
+                    </div>
+
+                    <p>
+                        Si alguno de tus dominios no aparece en el listado, es posible que:
+                    </p>
+
+                    <ul style="padding-left:18px; margin-top:5px;">
+                        <li>El proveedor DNS no permita actualización automática</li>
+                        <li>Exista propagación pendiente</li>
+                        <li>El dominio no apunte a este servidor</li>
+                    </ul>
+
+                    <p style="margin-top:25px;">
+                        Para cualquier revisión adicional, puedes contactar con el equipo técnico o revisar la configuración DNS manualmente.
+                    </p>
+
+                    <p style="margin-top:30px;">
+                        Atentamente,<br>
+                        <strong>Dpto. Infraestructura</strong>
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+                <td style="background:#020617; padding:16px; text-align:center; color:#94a3b8; font-size:12px;">
+                    Este correo ha sido generado automáticamente. No respondas a este mensaje.
+                </td>
+            </tr>
+
+        </table>
+
+    </td>
+</tr>
+</table>
+
+</body>
+</html>

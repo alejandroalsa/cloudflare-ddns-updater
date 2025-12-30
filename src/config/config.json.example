@@ -1,0 +1,21 @@
+{
+  "domains": {
+    "ejemplo.com": {
+      "api_token": "tu_token_de_api_para_ejemplo_com",
+      "zone_id": "tu_zone_id_de_ejemplo_com",
+      "records": [
+        "ejemplo.com",
+        "www.ejemplo.com",
+        "*.ejemplo.com"
+      ]
+    },
+    "otrodominio.com": {
+      "api_token": "tu_token_de_api_para_otrodominio_com",
+      "zone_id": "tu_zone_id_de_otrodominio_com",
+      "records": [
+        "otrodominio.com",
+        "subdominio.otrodominio.com"
+      ]
+    }
+  }
+}
